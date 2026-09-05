@@ -3,7 +3,7 @@
 
 > **Course:** 192-304 Agile Software Development (BSc IT - Year 3)  
 > **Course Lecturer:** Krissada Chalermsook (Oak)  
-> **Student / Author:** Aeint Kyi Pyar Soe (6705140003) & **Htet Soe Lin (6705140023)**  
+> **Student / Author:** Aeint Kyi Pyar Soe (6705140003) & Htet Soe Lin (6705140023)
 > **Documentation Version:** 2.0.0 (Consolidated Agile Release)  
 > **Status:** Active Sprint Baseline  
 
