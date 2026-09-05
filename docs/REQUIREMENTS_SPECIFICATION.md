@@ -454,17 +454,19 @@ quadrantChart
     title Non-Functional Requirements Matrix
     x-axis Low Technical Complexity --> High Technical Complexity
     y-axis Low System Impact --> Critical System Impact
-    quadrant-1 High Priority and Complex (Security, WebSockets)
-    quadrant-2 High Priority Quick Wins (Mobile Layout, Fast Quiz)
-    quadrant-3 Nice to Have (Advanced Caching)
-    quadrant-4 Architectural Hygiene (Linting, Modularity)
+
+    quadrant-1 High Priority and Complex
+    quadrant-2 High Priority Quick Wins
+    quadrant-3 Nice to Have
+    quadrant-4 Architectural Hygiene
+
     "JWT Session and Bcrypt Hash": [0.70, 0.92]
-    "Real-Time Chat Latency <300ms": [0.82, 0.88]
-    "Mobile Responsive Layout (360px+)": [0.25, 0.90]
-    "Quiz Completion Time <2 mins": [0.20, 0.85]
-    "Match Calculation Latency <150ms": [0.45, 0.82]
-    "99.5% System Availability": [0.60, 0.75]
-    "Test Coverage >=80%": [0.40, 0.78]
+    "Real Time Chat Latency": [0.82, 0.88]
+    "Mobile Responsive Layout": [0.25, 0.90]
+    "Quiz Completion Time": [0.20, 0.85]
+    "Match Calculation Latency": [0.45, 0.82]
+    "System Availability": [0.60, 0.75]
+    "Test Coverage": [0.40, 0.78]
 ```
 
 ### 4.1 Performance & Scalability
