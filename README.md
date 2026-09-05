@@ -1,1 +1,1 @@
-# agile_group_assignment
+# agile_group_project
