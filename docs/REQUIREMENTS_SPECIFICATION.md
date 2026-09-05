@@ -458,7 +458,7 @@ quadrantChart
     quadrant-2 High Priority Quick Wins (Mobile Layout, Fast Quiz)
     quadrant-3 Nice to Have (Advanced Caching)
     quadrant-4 Architectural Hygiene (Linting, Modularity)
-    "JWT Session & Bcrypt Hash": [0.70, 0.92]
+    "JWT Session and Bcrypt Hash": [0.70, 0.92]
     "Real-Time Chat Latency <300ms": [0.82, 0.88]
     "Mobile Responsive Layout (360px+)": [0.25, 0.90]
     "Quiz Completion Time <2 mins": [0.20, 0.85]
