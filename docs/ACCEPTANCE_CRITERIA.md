@@ -183,24 +183,21 @@ And clicking "Next" returns to Step 2 with existing data intact.
 > **So that** I can immediately identify living compatibility before messaging.
 
 ##### Mathematical Scoring Formulation:
-```$$
-S(A, B) =
-\max\left(
-0\%,
-\left[
-100\% \times
-\left(
-1 - \sum_{i=1}^{4}
-w_i \cdot
-\frac{|A_i - B_i|}{\text{MaxDiff}_i}
-\right)
-\right]
-- \text{Penalty}
-\right)
-```
-* Weights: Sleep ($w_1 = 0.30$), Cleanliness ($w_2 = 0.30$), Guests ($w_3 = 0.20$), Noise ($w_4 = 0.20$).
 
-##### Scenario 3.1: High Compatibility Verification ($\ge 85\%$)
+$$
+S(A, B) = \max\left(0, \left[ 100 \times \left(1 - \sum_{i=1}^{4} w_i \cdot \frac{|A_i - B_i|}{\text{MaxDiff}_i}\right) \right] - \text{Penalty}\right)
+$$
+
+* **Compatibility Range**: Normalized pairwise score $S(A, B)$ outputting a percentage from **0% to 100%**.
+* **Dimension Weights ($w_i$) & Scales ($\text{MaxDiff}_i$)**:
+  * **Sleep Harmony** ($w_1 = 0.30$): Habit scale 1–3 $\implies \text{MaxDiff}_1 = 2$
+  * **Cleanliness** ($w_2 = 0.30$): Habit scale 1–5 $\implies \text{MaxDiff}_2 = 4$
+  * **Guest Policy** ($w_3 = 0.20$): Habit scale 1–3 $\implies \text{MaxDiff}_3 = 2$
+  * **Noise Tolerance** ($w_4 = 0.20$): Habit scale 1–3 $\implies \text{MaxDiff}_4 = 2$
+  * Normalized weight sum: $\sum_{i=1}^{4} w_i = 1.00$ (100% total weight)
+* **Deal-Breaker Penalty**: Direct score deduction (25% to 50%) applied when non-negotiable preferences clash (e.g., smoking or pets).
+
+##### Scenario 3.1: High Compatibility Verification (≥ 85%)
 ```gherkin
 Given User A (Alex) has habit vector: [Sleep: 3, Clean: 4, Guests: 2, Noise: 2]
 And User B (Ethan) has habit vector: [Sleep: 2, Clean: 4, Guests: 2, Noise: 2]
@@ -215,7 +212,7 @@ And the UI displays an Emerald Green match badge: "85% Compatibility"
 And generates aligned habit chips: "[Aligned Cleaning Standards]", "[Matching Guest Rules]", "[Compatible Noise Levels]".
 ```
 
-##### Scenario 3.2: Low Compatibility Schedule Mismatch ($< 60\%$)
+##### Scenario 3.2: Low Compatibility Schedule Mismatch (< 60%)
 ```gherkin
 Given User A (Maya) is an Early Riser (1) with Cleanliness 5 and Quiet Sanctuary (1)
 And User B (Alex) is a Night Owl (3) with Cleanliness 4 and Moderate Noise (2)
