@@ -454,7 +454,7 @@ quadrantChart
     title Non-Functional Requirements Matrix
     x-axis Low Technical Complexity --> High Technical Complexity
     y-axis Low System Impact --> Critical System Impact
-    quadrant-1 High Priority & Complex (Security, WebSockets)
+    quadrant-1 High Priority and Complex (Security, WebSockets)
     quadrant-2 High Priority Quick Wins (Mobile Layout, Fast Quiz)
     quadrant-3 Nice to Have (Advanced Caching)
     quadrant-4 Architectural Hygiene (Linting, Modularity)
