@@ -183,7 +183,7 @@ And clicking "Next" returns to Step 2 with existing data intact.
 > **So that** I can immediately identify living compatibility before messaging.
 
 ##### Mathematical Scoring Formulation:
-$$
+```$$
 S(A, B) =
 \max\left(
 0\%,
@@ -198,6 +198,7 @@ w_i \cdot
 - \text{Penalty}
 \right)
 $$
+```
 * Weights: Sleep ($w_1 = 0.30$), Cleanliness ($w_2 = 0.30$), Guests ($w_3 = 0.20$), Noise ($w_4 = 0.20$).
 
 ##### Scenario 3.1: High Compatibility Verification ($\ge 85\%$)
